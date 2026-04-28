@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - ShreeJi Beej Bhandaar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🌿</span> ShreeJi Beej <span>Bhandaar</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html" class="active">Categories</a></li>
+            <li><a href="seeds.html">Premium Seeds</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="margin-top: 80px; padding: 4rem 5%; text-align: center; background: rgba(16, 185, 129, 0.05); border-bottom: 1px solid var(--border-color);">
+        <h1>Our <span class="highlight">Product Categories</span></h1>
+        <p style="max-width: 600px; margin: 0 auto;">Everything you need to ensure a healthy, bountiful crop from start to finish.</p>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='seeds.html'" style="cursor: pointer;">
+                <div class="card-img-container">
+                    <img src="assets/images/seeds.png" alt="Premium Seeds">
+                </div>
+                <div class="card-content">
+                    <h3>Premium Seeds</h3>
+                    <p>High-yield, disease-resistant seeds tailored for diverse climates and soil types.</p>
+                </div>
+            </div>
+            
+            <div class="category-card" onclick="window.location.href='pesticides.html'" style="cursor: pointer;">
+                <div class="card-img-container">
+                    <img src="assets/images/pesticides.png" alt="Crop Protection">
+                </div>
+                <div class="card-content">
+                    <h3>Crop Protection</h3>
+                    <p>Advanced organic and synthetic solutions to keep your crops safe from pests.</p>
+                </div>
+            </div>
+            
+            <div class="category-card" onclick="window.location.href='equipment.html'" style="cursor: pointer;">
+                <div class="card-img-container">
+                    <img src="assets/images/tools.png" alt="Farming Equipment">
+                </div>
+                <div class="card-content">
+                    <h3>Farming Equipment</h3>
+                    <p>Modern tools and machinery engineered for durability and ultimate efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">🌿</span> ShreeJi Beej <span>Bhandaar</span>
+                </div>
+                <p>Empowering farmers with world-class agricultural products, seeds, and equipment since 1990.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Products</a></li>
+                    <li><a href="seeds.html">Seeds</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@shreejibeejbhandaar.com</p>
+                <p>Phone: +91 93366 84845 (Adesh Rathour)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShreeJi Beej Bhandaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
