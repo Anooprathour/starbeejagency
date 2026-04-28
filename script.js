@@ -28,6 +28,49 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Add initial styles and observe elements
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Sidebar Menu Logic
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelector('.nav-links');
+    const contactBtn = document.querySelector('.navbar > .btn-primary');
+
+    if (navbar && navLinks) {
+        // Create hamburger icon
+        const hamburger = document.createElement('div');
+        hamburger.classList.add('hamburger');
+        hamburger.innerHTML = '<div class="line1"></div><div class="line2"></div><div class="line3"></div>';
+        
+        // Insert after logo
+        const logo = document.querySelector('.logo');
+        if (logo) logo.after(hamburger);
+
+        // Manage contact button for mobile
+        if(contactBtn) {
+            contactBtn.classList.add('desktop-only');
+            
+            const mobileContactLi = document.createElement('li');
+            mobileContactLi.classList.add('mobile-only');
+            const clonedBtn = contactBtn.cloneNode(true);
+            clonedBtn.classList.remove('desktop-only');
+            mobileContactLi.appendChild(clonedBtn);
+            navLinks.appendChild(mobileContactLi);
+        }
+
+        // Toggle menu on click
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+        });
+
+        // Close menu when clicking a link
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                hamburger.classList.remove('toggle');
+            });
+        });
+    }
+
     const cards = document.querySelectorAll('.category-card, .catalogue-item');
     
     cards.forEach((card, index) => {
